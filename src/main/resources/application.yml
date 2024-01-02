@@ -3,7 +3,7 @@ spring:
     import: "optional:configserver:${CLOUD_CONFIG_IMPORT_URL}"
   cloud:
     config:
-      name: application
+      name: status
       profile: dev
 
 management:
