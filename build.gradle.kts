@@ -60,8 +60,16 @@ dependencies {
     // Kafka
     implementation(Dependencies.KAFKA)
 
-    // Spring Config
+    //Spring Config
     implementation(Dependencies.CLOUD_CONFIG)
+
+    implementation(Dependencies.RESILIENCE4J)
+
+    // configuration
+    annotationProcessor(Dependencies.CONFIGURATION_PROCESSOR)
+
+    // Resilience4j
+    implementation(Dependencies.OPEN_FEIGN)
 }
 
 tasks.withType<KotlinCompile> {
