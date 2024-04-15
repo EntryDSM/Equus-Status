@@ -3,7 +3,7 @@ package hs.kr.equus.status.domain.status.service
 import hs.kr.equus.status.domain.status.domain.Status
 import hs.kr.equus.status.domain.status.domain.repository.StatusRepository
 import hs.kr.equus.status.domain.status.exception.StatusNotFoundException
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
