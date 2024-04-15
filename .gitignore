@@ -344,9 +344,3 @@ buildSrc/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.key
 buildSrc/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.len
 
 buildSrc/build/kotlin/compileKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at
-
-gradle/wrapper/gradle-wrapper.jar
-
-gradle/wrapper/gradle-wrapper.properties
-
-gradlew
