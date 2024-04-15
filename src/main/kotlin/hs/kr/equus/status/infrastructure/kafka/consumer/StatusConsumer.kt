@@ -9,12 +9,12 @@ import org.springframework.stereotype.Component
 @Component
 class StatusConsumer(
     private val mapper: ObjectMapper,
-    private val createStatusService: CreateStatusService,
+    private val createStatusService: CreateStatusService
 ) {
     @KafkaListener(
         topics = [KafkaTopics.CREATE_APPLICATION],
         groupId = "create-status",
-        containerFactory = "kafkaListenerContainerFactory",
+        containerFactory = "kafkaListenerContainerFactory"
     )
     fun createStatus(message: String) {
         val receiptCode = mapper.readValue(message, Long::class.java)

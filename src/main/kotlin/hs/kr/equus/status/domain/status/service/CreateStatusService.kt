@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional
 
 @Service
 class CreateStatusService(
-    private val statusRepository: StatusRepository,
+    private val statusRepository: StatusRepository
 ) {
     @Transactional
     fun execute(receiptCode: Long) {

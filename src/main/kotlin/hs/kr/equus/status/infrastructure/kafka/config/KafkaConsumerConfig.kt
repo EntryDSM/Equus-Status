@@ -12,7 +12,7 @@ import org.springframework.kafka.support.serializer.JsonDeserializer
 @EnableKafka
 @Configuration
 class KafkaConsumerConfig(
-    private val kafkaProperty: KafkaProperty,
+    private val kafkaProperty: KafkaProperty
 ) {
     @Bean
     fun kafkaListenerContainerFactory(): ConcurrentKafkaListenerContainerFactory<String, String> {
