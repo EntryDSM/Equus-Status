@@ -47,6 +47,7 @@ dependencies {
 
     // Test
     testImplementation(Dependencies.SPRING_TEST)
+    testImplementation(Dependencies.MOCKITO_KOTLIN)
 
     // Logging
     implementation(Dependencies.SENTRY)
