@@ -14,9 +14,15 @@ class GetStatusByReceiptCodeService(
     fun execute(receiptCode: Long): InternalStatusResponse {
         val status = statusRepository.findByReceiptCode(receiptCode) ?: throw StatusNotFoundException
 
-        return InternalStatusResponse(
-            isPrintedArrived = status.isPrintsArrived,
-            isSubmit = status.isSubmitted
-        )
+        return status.run {
+            InternalStatusResponse(
+                id = id,
+                receiptCode = receiptCode,
+                isSubmitted = isSubmitted,
+                examCode = examCode,
+                isFirstRoundPass = isFirstRoundPass,
+                isSecondRoundPass = isSecondRoundPass,
+            )
+        }
     }
 }
