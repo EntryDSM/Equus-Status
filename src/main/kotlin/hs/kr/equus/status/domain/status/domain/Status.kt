@@ -14,9 +14,13 @@ class Status(
     var examCode: String? = null,
     var isFirstRoundPass: Boolean = false,
     var isSecondRoundPass: Boolean = false,
-    val receiptCode: Long,
+    val receiptCode: Long
 ) {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0
+
+    fun cancelSubmit() {
+        isSubmitted = false
+    }
 }

@@ -47,6 +47,7 @@ dependencies {
 
     // Test
     testImplementation(Dependencies.SPRING_TEST)
+    testImplementation(Dependencies.MOCKITO_KOTLIN)
 
     // Logging
     implementation(Dependencies.SENTRY)
@@ -60,7 +61,7 @@ dependencies {
     // Kafka
     implementation(Dependencies.KAFKA)
 
-    //Spring Config
+    // Spring Config
     implementation(Dependencies.CLOUD_CONFIG)
 
     implementation(Dependencies.RESILIENCE4J)

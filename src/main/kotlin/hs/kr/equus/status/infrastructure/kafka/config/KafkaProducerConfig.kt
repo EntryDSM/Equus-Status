@@ -1,6 +1,5 @@
 package hs.kr.equus.status.infrastructure.kafka.config
 
-
 import org.apache.kafka.clients.producer.ProducerConfig
 import org.apache.kafka.common.serialization.StringSerializer
 import org.springframework.context.annotation.Bean
@@ -13,7 +12,7 @@ import java.util.UUID
 
 @Configuration
 class KafkaProducerConfig(
-    private val kafkaProperty: KafkaProperty,
+    private val kafkaProperty: KafkaProperty
 ) {
     @Bean
     fun kafkaTemplate(): KafkaTemplate<String, Any> {
