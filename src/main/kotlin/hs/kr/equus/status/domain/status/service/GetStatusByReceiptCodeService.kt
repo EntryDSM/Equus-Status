@@ -21,7 +21,7 @@ class GetStatusByReceiptCodeService(
                 isSubmitted = isSubmitted,
                 examCode = examCode,
                 isFirstRoundPass = isFirstRoundPass,
-                isSecondRoundPass = isSecondRoundPass,
+                isSecondRoundPass = isSecondRoundPass
             )
         }
     }
