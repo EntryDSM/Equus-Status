@@ -11,9 +11,6 @@ class CreateStatusService(
 ) {
     @Transactional
     fun execute(receiptCode: Long) {
-        statusRepository.findByReceiptCode(receiptCode)
-            ?: statusRepository.save(
-            Status(receiptCode = receiptCode)
-        )
+        statusRepository.findByReceiptCode(receiptCode) ?: statusRepository.save(Status(receiptCode = receiptCode))
     }
 }
