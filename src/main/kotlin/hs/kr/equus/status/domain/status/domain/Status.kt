@@ -23,4 +23,8 @@ class Status(
     fun cancelSubmit() {
         isSubmitted = false
     }
+
+    fun changeIsPrintsArrivedStatus(isPrintsArrived: Boolean) {
+        this.isPrintsArrived = isPrintsArrived
+    }
 }
