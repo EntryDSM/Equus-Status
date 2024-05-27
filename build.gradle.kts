@@ -32,7 +32,6 @@ dependencies {
 
     // Database
     implementation(Dependencies.SPRING_DATA_JPA)
-    implementation(Dependencies.SPRING_REDIS)
     runtimeOnly(Dependencies.MYSQL_CONNECTOR)
 
     // Web
@@ -71,6 +70,9 @@ dependencies {
 
     // Resilience4j
     implementation(Dependencies.OPEN_FEIGN)
+
+    // Actuator
+    implementation(Dependencies.ACTUATOR)
 }
 
 tasks.withType<KotlinCompile> {
