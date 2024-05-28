@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service
 class UpdateStatusService(
     private val statusRepository: StatusRepository
 ) {
-    fun execute(receiptCode: Long){
+    fun execute(receiptCode: Long) {
         val status = statusRepository.findByReceiptCode(receiptCode) ?: throw StatusNotFoundException
         status.finalSubmit()
     }
