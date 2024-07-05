@@ -20,7 +20,8 @@ class GetAllStatusService(
                 isSubmitted = it.isSubmitted,
                 examCode = it.examCode,
                 isFirstRoundPass = it.isFirstRoundPass,
-                isSecondRoundPass = it.isSecondRoundPass
+                isSecondRoundPass = it.isSecondRoundPass,
+                isPrintsArrived = it.isPrintsArrived
             )
         }
     }
