@@ -36,10 +36,9 @@ class KafkaConsumerConfig(
             JsonDeserializer.TRUSTED_PACKAGES to "*",
             "security.protocol" to "SASL_PLAINTEXT",
             "sasl.mechanism" to "SCRAM-SHA-512",
-            "sasl.jaas.config" to
-                    "org.apache.kafka.common.security.scram.ScramLoginModule required " +
-                    "username=\"${kafkaProperty.confluentApiKey}\" " +
-                    "password=\"${kafkaProperty.confluentApiSecret}\";"
+            "sasl.jaas.config" to "org.apache.kafka.common.security.scram.ScramLoginModule required " +
+                "username=\"${kafkaProperty.confluentApiKey}\" " +
+                "password=\"${kafkaProperty.confluentApiSecret}\";"
         )
     }
 }

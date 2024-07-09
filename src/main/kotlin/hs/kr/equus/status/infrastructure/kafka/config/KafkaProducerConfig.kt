@@ -30,9 +30,9 @@ class KafkaProducerConfig(
             "security.protocol" to "SASL_PLAINTEXT",
             "sasl.mechanism" to "SCRAM-SHA-512",
             "sasl.jaas.config" to
-                    "org.apache.kafka.common.security.scram.ScramLoginModule required " +
-                    "username=\"${kafkaProperty.confluentApiKey}\" " +
-                    "password=\"${kafkaProperty.confluentApiSecret}\";"
+                "org.apache.kafka.common.security.scram.ScramLoginModule required " +
+                "username=\"${kafkaProperty.confluentApiKey}\" " +
+                "password=\"${kafkaProperty.confluentApiSecret}\";"
         )
     }
 }
