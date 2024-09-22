@@ -13,15 +13,6 @@ class StatusConsumer(
     private val createStatusService: CreateStatusService,
     private val updateStatusService: UpdateStatusService
 ) {
-    @KafkaListener(
-        topics = [KafkaTopics.CREATE_APPLICATION],
-        groupId = "create-status",
-        containerFactory = "kafkaListenerContainerFactory"
-    )
-    fun createStatus(message: String) {
-        val receiptCode = mapper.readValue(message, Long::class.java)
-        createStatusService.execute(receiptCode)
-    }
 
     @KafkaListener(
         topics = [KafkaTopics.SUBMIT_APPLICATION_FINAL],
