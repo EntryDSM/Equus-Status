@@ -5,4 +5,5 @@ import org.springframework.data.repository.CrudRepository
 
 interface StatusRepository : CrudRepository<Status, Long> {
     fun findByReceiptCode(receiptCode: Long): Status?
+    fun deleteByReceiptCode(receiptCode: Long)
 }
