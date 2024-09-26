@@ -5,6 +5,7 @@ import hs.kr.equus.status.domain.status.service.CreateStatusService
 import hs.kr.equus.status.domain.status.service.DeleteStatusService
 import hs.kr.equus.status.domain.status.service.UpdateStatusService
 import hs.kr.equus.status.infrastructure.kafka.config.KafkaTopics
+import hs.kr.equus.status.infrastructure.kafka.consumer.dto.CreateApplicationEvent
 import org.springframework.kafka.annotation.KafkaListener
 import org.springframework.stereotype.Component
 
@@ -21,8 +22,8 @@ class StatusConsumer(
         containerFactory = "kafkaListenerContainerFactory"
     )
     fun createStatus(message: String) {
-        val receiptCode = mapper.readValue(message, Long::class.java)
-        createStatusService.execute(receiptCode)
+        val createApplicationEvent = mapper.readValue(message, CreateApplicationEvent::class.java)
+        createStatusService.execute(createApplicationEvent.receiptCode)
     }
 
     @KafkaListener(
