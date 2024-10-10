@@ -14,7 +14,7 @@ class StatusConsumer(
     private val mapper: ObjectMapper,
     private val createStatusService: CreateStatusService,
     private val updateStatusService: UpdateStatusService,
-    private val deleteStatusService: DeleteStatusService,
+    private val deleteStatusService: DeleteStatusService
 ) {
     @KafkaListener(
         topics = [KafkaTopics.CREATE_APPLICATION],
