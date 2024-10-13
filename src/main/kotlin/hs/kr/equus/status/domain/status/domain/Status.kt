@@ -31,4 +31,16 @@ class Status(
     fun changeIsPrintsArrivedStatus(isPrintsArrived: Boolean) {
         this.isPrintsArrived = isPrintsArrived
     }
+
+    fun toCacheEntity(): StatusCache {
+        return StatusCache(
+            receiptCode = receiptCode,
+            isPrintsArrived = isPrintsArrived,
+            isSubmitted = isSubmitted,
+            examCode = examCode,
+            isFirstRoundPass = isFirstRoundPass,
+            isSecondRoundPass = isSecondRoundPass,
+            ttl = 60 * 10
+        )
+    }
 }
