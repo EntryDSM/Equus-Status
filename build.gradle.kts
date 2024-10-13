@@ -73,6 +73,8 @@ dependencies {
 
     // Actuator
     implementation(Dependencies.ACTUATOR)
+
+    implementation(Dependencies.SPRING_REDIS)
 }
 
 tasks.withType<KotlinCompile> {
