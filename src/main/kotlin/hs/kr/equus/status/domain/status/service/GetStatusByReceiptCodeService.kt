@@ -16,7 +16,7 @@ class GetStatusByReceiptCodeService(
     fun execute(receiptCode: Long): InternalStatusResponse {
         val status = statusRepository.findByReceiptCode(receiptCode) ?: throw StatusNotFoundException
 
-        if(!statusCacheRepository.existsById(receiptCode)) {
+        if (!statusCacheRepository.existsById(receiptCode)) {
             statusCacheRepository.save(status.toCacheEntity())
         }
 
