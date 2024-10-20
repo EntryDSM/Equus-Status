@@ -32,6 +32,10 @@ class Status(
         this.isPrintsArrived = isPrintsArrived
     }
 
+    fun changeExamCode(examCode: String) {
+        this.examCode = examCode
+    }
+
     fun toCacheEntity(): StatusCache {
         return StatusCache(
             receiptCode = receiptCode,
