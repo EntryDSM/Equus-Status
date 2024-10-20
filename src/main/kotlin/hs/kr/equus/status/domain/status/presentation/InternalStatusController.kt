@@ -7,6 +7,7 @@ import hs.kr.equus.status.domain.status.service.UpdateExamCodeService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PatchMapping
 import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
@@ -28,7 +29,7 @@ class InternalStatusController(
         return getAllStatusService.execute()
     }
 
-    @PatchMapping("/{receipt-code}/exam-code")
+    @PutMapping("/{receipt-code}/exam-code")
     fun updateExamCode(@PathVariable("receipt-code") receiptCode: Long, @RequestParam examCode: String) {
         updateExamCodeService.execute(receiptCode, examCode)
     }
